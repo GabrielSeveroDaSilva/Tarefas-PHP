@@ -1,5 +1,25 @@
 <?php
 session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_SESSION['tasks'])) {
+        $_SESSION['tasks'] = array();
+    }
+
+    if (isset($_POST['task_name']) && !empty($_POST['task_name'])) {
+        $task_name = $_POST['task_name'];
+        // Você pode adicionar validações adicionais aqui, se necessário.
+        $_SESSION['tasks'][] = $task_name;
+    }
+
+    if (isset($_POST['clear'])) {
+        $_SESSION['tasks'] = array(); // Remove todas as tarefas.
+    }
+
+    // Redirecione de volta para a página principal após o processamento do formulário
+    header('Location: index.php'); // Substitua 'index.php' pelo nome correto da sua página principal
+    exit; // Certifique-se de sair após o redirecionamento.
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,19 +28,17 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Gerenciador de Tarefas - PHP</title>
-    <link rel="stylesheet/less" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
 </head>
 
 <body>
-
     <div class="container">
         <div class="header">
             <h1>Gerenciador de Tarefas</h1>
         </div>
         <div class="form">
-            <form action="./processar_tarefa.php" method="post">
+            <form action="" method="post">
                 <!-- Defina action para o arquivo que processará o formulário -->
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da Tarefa">
@@ -41,7 +59,7 @@ session_start();
                 echo "</ul>";
             }
             ?>
-            <form action="./processar_tarefa.php" method="post">
+            <form action="" method="post">
                 <!-- Defina action para o arquivo que processará o formulário -->
                 <input type="hidden" name="clear" value="clear">
                 <button class="btn-clear" type="submit">Limpar Tarefas</button>
@@ -51,10 +69,5 @@ session_start();
             <p>Desenvolvido por Gabriel</p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
-
-
 </body>
-
 </html>
