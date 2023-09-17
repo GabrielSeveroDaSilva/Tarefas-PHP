@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    background: #F3F3F5;
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    background: #fff;
+    max-width: 450px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.25);
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+    }
+
+    .form {
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            label {
+                font-weight: bold;
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+
+            input {
+                height: 32px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                padding-left: 12px;
+                border: 1px solid #999;
+                border-radius: 4px;
+
+                &:focus {
+                    background: #f0f0f5;
+                }
+            }
+
+            button {
+                background: #AB47BC;
+                height: 32px;
+                border: none;
+                border-radius: 4px;
+                color: #FFF;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                transition: background .3s;
+
+
+                &:hover{
+                    background: #CE93D8;
+                }
+            }
+        }
+
+    }
+
+    .separator {
+        background: #bbb;
+        height: 2px;
+        border-radius: 1px;
+    }
+
+    .list-tasks {
+        margin-top: 12px;
+        margin-bottom: 12px;
+
+        ul {
+            list-style: none;
+
+            li {
+                background: #4DB6AC;
+                height: 54px;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+                transition: background .3s;
+
+                &:hover{
+                    background: #80CBC4;
+                }
+            }
+        }
+
+        .btn-clear{
+            background: #EF5350;
+            border-radius: 4px;
+            padding:0 12px;
+            height: 32px;
+            color: #fff;
+            border: none;
+            transition: background .3s;
+
+            &:hover{
+                background:#EF9A9A ;
+            }
+        }
+    }
+
+    .footer{
+        background: #f0f0f5;
+        border-radius: 4px;
+        padding: 12px;
+
+        p{
+            color: #999;
+            font-size: 12px;
+        }
+    }
+}
