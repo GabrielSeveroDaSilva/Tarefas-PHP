@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Gerenciador de Tarefas - PHP</title>
-    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 </head>
