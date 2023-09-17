@@ -20,7 +20,7 @@ session_start();
             <h1>Gerenciador de Tarefas</h1>
         </div>
         <div class="form">
-            <form action="processar_tarefa.php" method="post">
+            <form action="./processar_tarefa.php" method="post">
                 <!-- Defina action para o arquivo que processará o formulário -->
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da Tarefa">
@@ -41,7 +41,7 @@ session_start();
                 echo "</ul>";
             }
             ?>
-            <form action="processar_tarefa.php" method="post">
+            <form action="./processar_tarefa.php" method="post">
                 <!-- Defina action para o arquivo que processará o formulário -->
                 <input type="hidden" name="clear" value="clear">
                 <button class="btn-clear" type="submit">Limpar Tarefas</button>
