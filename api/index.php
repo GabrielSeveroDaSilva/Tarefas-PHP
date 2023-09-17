@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Gerenciador de Tarefas - PHP</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="/api/css/style.css">
+    <link rel="stylesheet/less" href="./api/css/style.less">
 </head>
 
 <!-- <style>
